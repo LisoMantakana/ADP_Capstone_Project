@@ -8,6 +8,19 @@ public class Helper {
             return true;
         return false;
     }
+    public static Boolean isNumNullOrEmpty(Long num){
+        if(num == null || num == 0){
+            return true;
+        }
+        return false;
+    }
+
+    public static Boolean isIntNullOrEmpty(Integer num){
+        if(num == null || num == 0){
+            return true;
+        }
+        return false;
+    }
     public static String generateId(){
         return UUID.randomUUID().toString();
     }
