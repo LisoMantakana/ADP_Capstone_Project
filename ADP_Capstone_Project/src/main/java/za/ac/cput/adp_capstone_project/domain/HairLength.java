@@ -10,7 +10,7 @@ public class HairLength {
     private String hairlengthID;
    private String hairLengthValue;
    private String lengthDescription;
-     private String image;
+
 
     public HairLength() {
     }
@@ -18,7 +18,7 @@ public class HairLength {
         hairlengthID = builder.hairlengthID;
         hairLengthValue = builder.hairLengthValue;
         lengthDescription = builder.lengthDescription;
-        image = builder.image;
+
     }
 
     public String getHairlengthID() {
@@ -33,21 +33,19 @@ public class HairLength {
         return lengthDescription;
     }
 
-    public String getImage() {
-        return image;
-    }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HairLength that = (HairLength) o;
-        return Objects.equals(hairlengthID, that.hairlengthID) && Objects.equals(hairLengthValue, that.hairLengthValue) && Objects.equals(lengthDescription, that.lengthDescription) && Objects.equals(image, that.image);
+        return Objects.equals(hairlengthID, that.hairlengthID) && Objects.equals(hairLengthValue, that.hairLengthValue) && Objects.equals(lengthDescription, that.lengthDescription) ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(hairlengthID, hairLengthValue, lengthDescription, image);
+        return Objects.hash(hairlengthID, hairLengthValue, lengthDescription);
     }
 
     @Override
@@ -56,7 +54,7 @@ public class HairLength {
                 "hairlengthID='" + hairlengthID + '\'' +
                 ", hairLengthValue='" + hairLengthValue + '\'' +
                 ", lengthDescription='" + lengthDescription + '\'' +
-                ", image='" + image + '\'' +
+                 '\'' +
                 '}';
     }
 
@@ -64,7 +62,7 @@ public class HairLength {
         private String hairlengthID;
         private String hairLengthValue;
         private String lengthDescription;
-        private String image;
+
 
         public Builder setHairlengthID(String hairlengthID) {
             this.hairlengthID = hairlengthID;
@@ -82,16 +80,13 @@ public class HairLength {
             return this;
         }
 
-        public Builder setImage(String image) {
-            this.image = image;
-            return this;
-        }
+
 
         public Builder copy(HairLength hairLength){
         hairlengthID = hairLength.hairlengthID;
         hairLengthValue = hairLength.hairLengthValue;
         lengthDescription = hairLength.lengthDescription;
-        image = hairLength.image;
+
         return this;
     }
     public HairLength build(){
